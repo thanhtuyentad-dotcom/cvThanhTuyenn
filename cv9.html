@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Nguyễn Hồ Thanh Tuyền</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary:#1f3d36;
+    --secondary:#2e5d52;
+    --light:#f5f7f6;
+    --white:#fff;
+    --text:#111;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    background:var(--primary);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    z-index:999;
+}
+
+nav a{
+    color:#fff;
+    margin:0 10px;
+    text-decoration:none;
+}
+
+nav a:hover{color:#9fd3c7;}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 10% 60px;
+    background:#fff;
+}
+
+.hero-text{width:55%;}
+
+.hero-text h1{
+    font-size:42px;
+    color:var(--primary);
+}
+
+.hero-text h3{
+    margin:10px 0;
+    color:var(--secondary);
+}
+
+/* AVATAR */
+.hero-img{
+    width:40%;
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.hero-img::before{
+    content:'';
+    position:absolute;
+    width:320px;
+    height:320px;
+    background:radial-gradient(circle, rgba(46,93,82,0.4), transparent);
+    border-radius:50%;
+    filter:blur(40px);
+    z-index:-1;
+}
+
+.hero-img img{
+    width:280px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    transition:0.5s;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero-img img:hover{
+    transform:scale(1.07);
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+
+/* SECTION */
+section{padding:60px 10%;}
+
+h2{color:var(--primary);margin-bottom:20px;}
+
+/* CARD */
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* SKILL */
+.skill{margin-bottom:15px;}
+
+.skill-bar{
+    height:8px;
+    background:#ddd;
+    border-radius:10px;
+}
+
+.skill-fill{
+    height:100%;
+    background:var(--secondary);
+    border-radius:10px;
+}
+
+/* TIMELINE */
+.timeline{
+    border-left:3px solid var(--secondary);
+    padding-left:20px;
+}
+
+/* ANIMATION */
+.hidden{
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.6s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero{flex-direction:column;}
+    .hero-text,.hero-img{width:100%;text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div style="color:white;font-weight:600;">Thanh Tuyền</div>
+<div>
+<a href="#about">Giới thiệu</a>
+<a href="#skills">Kỹ năng</a>
+<a href="#experience">Kinh nghiệm</a>
+<a href="#education">Học vấn</a>
+<a href="#achievements">Thành tựu</a>
+<a href="#hobbies">Sở thích</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>Nguyễn Hồ Thanh Tuyền</h1>
+<h3>Nhân viên Kinh doanh - Thú Y</h3>
+
+<p>
+Tốt nghiệp loại Xuất sắc ngành Dược Thú Y, hiện đang theo học cao học.
+Có kinh nghiệm trong kinh doanh thức ăn chăn nuôi và tư vấn dinh dưỡng.
+</p>
+
+<p>📧 thanhtuyentad@gmail.com</p>
+<p>📞 0868960429</p>
+<p>📍 Cần Thơ</p>
+</div>
+
+<div class="hero-img">
+<img src="avatar.jpg" alt="Ảnh cá nhân">
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2>Giới thiệu</h2>
+<div class="card">
+Tôi là một người năng động, có tinh thần trách nhiệm cao và luôn chủ động trong công việc.
+Với nền tảng chuyên môn về thú y cùng kỹ năng kinh doanh, tôi có khả năng tư vấn giải pháp hiệu quả cho khách hàng và xây dựng mối quan hệ lâu dài.
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+<h2>Kỹ năng</h2>
+
+<div class="skill">
+<p>Giao tiếp & tư vấn khách hàng</p>
+<div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<p>Chăm sóc khách hàng</p>
+<div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<p>Làm việc nhóm</p>
+<div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>Quản lý thời gian</p>
+<div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>Tiếng Anh</p>
+<div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="hidden">
+<h2>Kinh nghiệm</h2>
+<div class="timeline">
+<div class="card">
+<h3>Nhân viên kinh doanh (2024 - nay)</h3>
+<p>
+- Phát triển khách hàng<br>
+- Tư vấn dinh dưỡng vật nuôi<br>
+- Chăm sóc khách hàng<br>
+- Phân tích thị trường
+</p>
+</div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="hidden">
+<h2>Học vấn</h2>
+<div class="timeline">
+<div class="card">
+<h3>Đại học Cần Thơ (2019 - 2024)</h3>
+<p>Dược Thú Y - Xuất sắc</p>
+</div>
+<div class="card">
+<h3>Cao học Thú Y (2025 - nay)</h3>
+</div>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="hidden">
+<h2>Thành tựu</h2>
+
+<div class="card">
+<b>✔ SYOF - De Heus (2023)</b>
+<p>Chương trình đào tạo chuyên sâu chăn nuôi – thú y, kết hợp lý thuyết và thực hành, có giảng dạy bằng tiếng Anh.</p>
+</div>
+
+<div class="card">
+<b>✔ Nghiên cứu khoa học</b>
+<p>Tham gia đề tài về gene kháng kháng sinh của E.coli và Salmonella tại Phú Quốc.</p>
+</div>
+
+<div class="card">
+<b>✔ Luận văn đăng báo khoa học</b>
+<p>Nghiên cứu về E.coli tại cơ sở giết mổ heo An Giang, đăng trên tạp chí ĐH Cần Thơ.</p>
+</div>
+
+<div class="card">
+<b>✔ Hoạt động Đoàn</b>
+<p>Tham gia tích cực hoạt động sinh viên và phát triển kỹ năng mềm.</p>
+</div>
+
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies" class="hidden">
+<h2>Sở thích</h2>
+<div class="card">
+🌍 Du lịch<br>
+🍳 Nấu ăn<br>
+🎵 Nghe nhạc<br>
+🤝 Kết nối
+</div>
+</section>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
